@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react'
 import Title from '../components/Title'
+import CleatItem from './CleatItem'
 
 class CleatsContainer extends PureComponent {
   renderCleat(cleat, index) {
-    return null
+    return <CleatItem key={index} {...cleat} />
   }
 
 
