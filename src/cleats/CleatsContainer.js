@@ -1,21 +1,21 @@
 import React, { PureComponent } from 'react'
-import Title from './components/Title.js'
+import Title from '../components/Title'
 
 class CleatsContainer extends PureComponent {
-  renderCleats(cleat, index) {
+  renderCleat(cleat, index) {
     return null
   }
 
 
   render(){
     return(
-      <div className="recipes wrapper">
+      <div className="cleats wrapper">
         <header>
-          <Title content="Recipes" />
+          <Title content="Cleats" />
         </header>
 
         <main>
-          { this.props.recipes.map(this.renderRecipe) }
+          { this.props.cleats.map(this.renderCleat) }
         </main>
       </div>
     )
