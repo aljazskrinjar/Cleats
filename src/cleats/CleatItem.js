@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import LikeButton from '../components/LikeButton.js'
 class CleatItem extends PureComponent {
   render() {
     const { title,summary } = this.props
@@ -8,6 +9,7 @@ class CleatItem extends PureComponent {
         <h1>{ title }</h1>
         <div>
           <p>{ summary }</p>
+          <LikeButton />
         </div>
       </article>
     )
