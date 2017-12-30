@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CleatsContainer from './cleats/CleatsContainer'
-import './App.css';
+
 
 const cleats = [
   {
