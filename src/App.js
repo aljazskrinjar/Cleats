@@ -6,7 +6,7 @@ const cleats = [
     _id: 'a',
     title: 'Adidas Predator',
     summary: 'Leather boot',
-    liked: false,
+    liked: true,
   },
   {
     _id: 'b',

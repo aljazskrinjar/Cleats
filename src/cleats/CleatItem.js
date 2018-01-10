@@ -46,4 +46,4 @@ const mapDispatchToProps = {
   toggleLikeCleat
 }
 
-export default CleatItem
+export default connect(null, mapDispatchToProps)(CleatItem)

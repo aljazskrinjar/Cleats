@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import Title from '../components/Title'
 import CleatItem, {cleatShape} from './CleatItem'
 import { connect } from 'react-redux'
+import './CleatsContainer.css'
 
 import PropTypes from 'prop-types'
 
@@ -31,4 +32,11 @@ class CleatsContainer extends PureComponent {
   }
 }
 
-export default CleatsContainer
+const mapStateToProps = ({ cleats }) => ({ cleats })
+
+// Same as:
+// const mapStoreToProps = (store) => {
+//   return { recipes: store.recipes }
+// }
+
+export default connect(mapStateToProps)(CleatsContainer)
