@@ -19,7 +19,7 @@ class CleatsContainer extends PureComponent {
 
   render(){
     return(
-      <div className="cleats wrapper">
+      <div className="container">
         <header>
           <Title content="Cleats" />
         </header>
