@@ -1,8 +1,16 @@
 import React, { PureComponent } from 'react'
 import Title from '../components/Title'
-import CleatItem from './CleatItem'
+import CleatItem, {cleatShape} from './CleatItem'
+import { connect } from 'react-redux'
+
+import PropTypes from 'prop-types'
 
 class CleatsContainer extends PureComponent {
+
+  static propTypes = {
+
+    cleats: PropTypes.arrayOf(cleatShape).isRequired,
+  }
   renderCleat(cleat, index) {
     return <CleatItem key={index} {...cleat} />
   }

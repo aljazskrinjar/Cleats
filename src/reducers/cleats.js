@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import CleatsContainer from './cleats/CleatsContainer'
+// src/reducers/cleats.js
 
 const cleats = [
   {
@@ -22,16 +21,12 @@ const cleats = [
   },
 ]
 
-
-class App extends Component {
-  render() {
-      return (
-        <div className="App">
-        <CleatsContainer cleats={cleats}/>
-      </div>
-    )
+export default function(state = cleats, action = {}) {
+  if (action.type === 'TOGGLE_LIKE_CLEAT') {
+    return state.map((cleat) => {
+      if (cleat._id !== action.payload) return cleat
+      return { ...cleat, liked: !cleat.liked }
+    })
+  }
+  return state
 }
-
-}
-
-export default App;
